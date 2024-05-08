@@ -45,6 +45,7 @@ dependencies {
   api(platform(libs.spring.statemachine))
 
   api(platform(libs.ktor))
+  api(platform(libs.koin))
   api(platform(libs.exposed))
   api(platform(libs.junit))
   api(platform(libs.testcontainers))

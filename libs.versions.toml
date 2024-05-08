@@ -4,6 +4,7 @@ spring-boot = "3.2.4"
 spring-cloud = "2023.0.0"
 spring-statemachine = "4.0.0"
 ktor = "2.3.10"
+koin = "3.5.6"
 exposed = "0.48.0"
 hikari = "5.1.0"
 mysql = "8.4.0"
@@ -23,6 +24,7 @@ spring-boot = { module = "org.springframework.boot:spring-boot-dependencies", ve
 spring-cloud = { module = "org.springframework.cloud:spring-cloud-dependencies", version.ref = "spring-cloud" }
 spring-statemachine = { module = "org.springframework.statemachine:spring-statemachine-bom", version.ref = "spring-statemachine" }
 ktor = { module = "io.ktor:ktor-bom", version.ref = "ktor" }
+koin = { module = "io.insert-koin:koin-bom", version.ref = "koin" }
 exposed = { module = "org.jetbrains.exposed:exposed-bom", version.ref = "exposed" }
 hikari = { module = "com.zaxxer:HikariCP", version.ref = "hikari" }
 mysql = { module = "com.mysql:mysql-connector-j", version.ref = "mysql" }
