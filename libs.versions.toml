@@ -11,6 +11,8 @@ postgresql = "42.7.3"
 sqlite = "3.45.3.0"
 liquibase = "4.27.0"
 kafka = "3.7.0"
+slf4j = "2.0.13"
+logback = "1.5.6"
 junit = "5.10.2"
 assertj = "3.25.3"
 
@@ -24,10 +26,11 @@ exposed = { module = "org.jetbrains.exposed:exposed-bom", version.ref = "exposed
 hikari = { module = "com.zaxxer:HikariCP", version.ref = "hikari" }
 mysql = { module = "com.mysql:mysql-connector-j", version.ref = "mysql" }
 postgresql = { module = "org.postgresql:postgresql", version.ref = "postgresql" }
-
 sqlite = { module = "org.xerial:sqlite-jdbc", version.ref = "sqlite" }
 liquibase = { module = "org.liquibase:liquibase-core", version.ref = "liquibase" }
 kafka-clients = { module = "org.apache.kafka:kafka-clients", version.ref = "kafka" }
 kafka-stream = { module = "org.apache.kafka:kafka-streams", version.ref = "kafka" }
+slf4j = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
+logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
 junit = { module = "org.junit:junit-bom", version.ref = "junit" }
 assertj = { module = "org.assertj:assertj-core", version.ref = "assertj" }
