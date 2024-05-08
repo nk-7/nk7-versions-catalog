@@ -15,6 +15,7 @@ slf4j = "2.0.13"
 logback = "1.5.6"
 junit = "5.10.2"
 assertj = "3.25.3"
+testcontainers = "1.19.7"
 
 [libraries]
 kotlin = { module = "org.jetbrains.kotlin:kotlin-bom", version.ref = "kotlin" }
@@ -34,3 +35,4 @@ slf4j = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
 logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
 junit = { module = "org.junit:junit-bom", version.ref = "junit" }
 assertj = { module = "org.assertj:assertj-core", version.ref = "assertj" }
+testcontainers = { module = "org.testcontainers:testcontainers-bom", version.ref = "testcontainers" }

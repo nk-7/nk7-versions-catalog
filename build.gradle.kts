@@ -47,6 +47,7 @@ dependencies {
     api(platform(libs.ktor))
     api(platform(libs.exposed))
     api(platform(libs.junit))
+    api(platform(libs.testcontainers))
 
     api(libs.hikari)
     api(libs.mysql)
