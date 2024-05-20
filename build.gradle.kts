@@ -1,5 +1,5 @@
 plugins {
-  `java-platform`
+  `version-catalog`
   `maven-publish`
 }
 
@@ -7,7 +7,7 @@ group = "dev.nk7"
 version = "1.0.0-SNAPSHOT"
 
 repositories {
-  maven(uri(properties["repo.releases.url"]!!))
+  maven(uri(properties["repo.releases.url"].toString()))
 }
 publishing {
   repositories {
@@ -27,37 +27,14 @@ publishing {
 
   }
   publications {
-    create<MavenPublication>("nk7-platform") {
-      from(components["javaPlatform"])
+    create<MavenPublication>("nk7-versions-catalog") {
+      from(components["versionCatalog"])
     }
   }
 }
 
-javaPlatform {
-  allowDependencies()
-}
-
-dependencies {
-  api(platform(libs.kotlin))
-
-  api(platform(libs.spring.boot))
-  api(platform(libs.spring.cloud))
-  api(platform(libs.spring.statemachine))
-
-  api(platform(libs.ktor))
-  api(platform(libs.koin))
-  api(platform(libs.exposed))
-  api(platform(libs.junit))
-  api(platform(libs.testcontainers))
-
-  api(libs.hikari)
-  api(libs.mysql)
-  api(libs.postgresql)
-  api(libs.sqlite)
-  api(libs.liquibase)
-  api(libs.kafka.clients)
-  api(libs.kafka.stream)
-  api(libs.slf4j)
-  api(libs.logback.classic)
-  api(libs.assertj)
+catalog {
+  versionCatalog {
+    from(files("libs.versions.toml"))
+  }
 }
