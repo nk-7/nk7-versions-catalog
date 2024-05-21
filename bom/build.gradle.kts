@@ -32,23 +32,24 @@ javaPlatform {
 }
 
 dependencies {
+  api(platform(libs.bom.kotlin))
+  api(platform(libs.bom.spring.boot))
+  api(platform(libs.bom.spring.cloud))
+  api(platform(libs.bom.exposed))
+  api(platform(libs.bom.testcontainers))
+  api(platform(libs.bom.junit))
+
   constraints {
-    api(platform(libs.bom.kotlin))
-    api(platform(libs.bom.spring.boot))
-    api(platform(libs.bom.spring.cloud))
-    api(platform(libs.bom.exposed))
-    api(platform(libs.bom.testcontainers))
-    api(platform(libs.bom.junit))
-
     api(libs.slf4j)
-    runtime(libs.logback.classic)
+    api(libs.logback.classic)
 
-    runtime(libs.postgresql)
-    runtime(libs.mysql)
-    runtime(libs.sqlite)
-    runtime(libs.liquibase)
+    api(libs.postgresql)
+    api(libs.mysql)
+    api(libs.sqlite)
+    api(libs.liquibase)
 
     api(libs.kafka.clients)
     api(libs.kafka.stream)
+    api(libs.bundles.commons.rng)
   }
 }
