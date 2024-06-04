@@ -38,6 +38,7 @@ dependencies {
   api(platform(libs.bom.exposed))
   api(platform(libs.bom.testcontainers))
   api(platform(libs.bom.junit))
+  api(platform(libs.bom.opentelemetry))
 
   constraints {
     api(libs.slf4j)

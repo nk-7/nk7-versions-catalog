@@ -12,6 +12,7 @@ logback = "1.5.6"
 junit = "5.10.2"
 assertj = "3.25.3"
 testcontainers = "1.19.7"
+opentelemetry = "1.38.0"
 
 [libraries]
 #BOMs
@@ -25,6 +26,7 @@ bom-koin = { module = "io.insert-koin:koin-bom", version.ref = "koin" }
 bom-exposed = { module = "org.jetbrains.exposed:exposed-bom", version.ref = "exposed" }
 bom-junit = { module = "org.junit:junit-bom", version.ref = "junit" }
 bom-testcontainers = { module = "org.testcontainers:testcontainers-bom", version.ref = "testcontainers" }
+bom-opentelemetry = { module = "io.opentelemetry:opentelemetry-bom", version.ref = "opentelemetry" }
 
 #Kotlin libs
 kotlin-stdlib-jdk8 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8" }
@@ -52,6 +54,36 @@ liquibase = { module = "org.liquibase:liquibase-core" }
 #Kafka
 kafka-clients = { module = "org.apache.kafka:kafka-clients" }
 kafka-stream = { module = "org.apache.kafka:kafka-streams" }
+
+# Open Telemetry
+opentelemtry-api = { module = "io.opentelemetry:opentelemetry-api" }
+opentelemetry-sdk = { module = "io.opentelemetry:opentelemetry-sdk" }
+opentelemetry-sdk-metrics = { module = "io.opentelemetry:opentelemetry-sdk-metrics" }
+opentelemetry-sdk-trace = { module = "io.opentelemetry:opentelemetry-sdk-trace" }
+opentelemetry-sdk-logs = { module = "io.opentelemetry:opentelemetry-sdk-logs" }
+opentelemetry-sdk-common = { module = "io.opentelemetry:opentelemetry-sdk-common" }
+opentelemetry-sdk-extension-autoconfigure = { module = "io.opentelemetry:opentelemetry-sdk-extension-autoconfigure" }
+opentelemetry-sdk-extension-autoconfigure-spi = { module = "io.opentelemetry:opentelemetry-sdk-extension-autoconfigure-spi" }
+opentelemetry-sdk-extension-jaeger-remote-sampler = { module = "io.opentelemetry:opentelemetry-sdk-extension-jaeger-remote-sampler" }
+opentelemetry-sdk-extension-incubator = { module = "io.opentelemetry:opentelemetry-sdk-extension-incubator" }
+opentelemtry-extension-kotlin = { module = "io.opentelemetry:opentelemetry-extension-kotlin" }
+
+opentelemetry-exporter-otlp = { module = "io.opentelemetry:opentelemetry-exporter-otlp" }
+opentelemetry-exporter-logging-otlp = { module = "io.opentelemetry:opentelemetry-exporter-logging-otlp" }
+opentelemetry-exporter-otlp-common = { module = "io.opentelemetry:opentelemetry-exporter-otlp-common" }
+opentelemetry-exporter-logging = { module = "io.opentelemetry:opentelemetry-exporter-logging" }
+opentelemetry-exporter-zipkin = { module = "io.opentelemetry:opentelemetry-exporter-zipkin" }
+opentelemetry-exporter-prometheus = { module = "io.opentelemetry:opentelemetry-exporter-prometheus" }
+opentelemetry-exporter-common = { module = "io.opentelemetry:opentelemetry-exporter-common" }
+opentelemetry-exporter-sender-okhttp = { module = "io.opentelemetry:opentelemetry-exporter-sender-okhttp" }
+opentelemetry-exporter-sender-jdk = { module = "io.opentelemetry:opentelemetry-exporter-sender-jdk" }
+opentelemetry-exporter-sender-grpc-managed-channel = { module = "io.opentelemetry:opentelemetry-exporter-sender-grpc-managed-channel" }
+
+opentelemtry-context = { module = "io.opentelemetry:opentelemetry-context" }
+
+opentelemtry-extension-trace-propagators = { module = "io.opentelemetry:opentelemetry-extension-trace-propagators" }
+opentelemtry-sdk-testing = { module = "io.opentelemetry:opentelemetry-sdk-testing" }
+
 
 #Logging
 slf4j = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
