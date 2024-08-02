@@ -16,7 +16,6 @@ opentelemetry = "1.40.0"
 
 [libraries]
 #BOMs
-
 bom-kotlin = { module = "org.jetbrains.kotlin:kotlin-bom", version.ref = "kotlin" }
 bom-spring-boot = { module = "org.springframework.boot:spring-boot-dependencies", version.ref = "spring-boot" }
 bom-spring-cloud = { module = "org.springframework.cloud:spring-cloud-dependencies", version.ref = "spring-cloud" }
@@ -39,11 +38,13 @@ kotlinx-coroutines-reactive = { module = "org.jetbrains.kotlinx:kotlinx-coroutin
 kotlinx-coroutines-reactor = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-reactor" }
 
 #Spring
-spring-boot-configuration-processor = { module = "org.springframework.boot:spring-boot-configuration-processor" }
+spring-boot-configuration-processor = { module = "org.springframework.boot:spring-boot-configuration-processor", version.ref = "spring-boot" }
 spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web" }
 spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test" }
+spring-boot-starter-starter = { module = "org.springframework.boot:spring-boot-starter" }
 spring-data-r2dbc = { module = "org.springframework.data:spring-data-r2dbc" }
 
+# Databases
 hikari = { module = "com.zaxxer:HikariCP" }
 mysql = { module = "com.mysql:mysql-connector-j" }
 postgresql = { module = "org.postgresql:postgresql" }
@@ -78,17 +79,15 @@ opentelemetry-exporter-common = { module = "io.opentelemetry:opentelemetry-expor
 opentelemetry-exporter-sender-okhttp = { module = "io.opentelemetry:opentelemetry-exporter-sender-okhttp" }
 opentelemetry-exporter-sender-jdk = { module = "io.opentelemetry:opentelemetry-exporter-sender-jdk" }
 opentelemetry-exporter-sender-grpc-managed-channel = { module = "io.opentelemetry:opentelemetry-exporter-sender-grpc-managed-channel" }
-
 opentelemetry-context = { module = "io.opentelemetry:opentelemetry-context" }
-
 opentelemetry-extension-trace-propagators = { module = "io.opentelemetry:opentelemetry-extension-trace-propagators" }
 opentelemetry-sdk-testing = { module = "io.opentelemetry:opentelemetry-sdk-testing" }
-
 
 #Logging
 slf4j = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
 logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
 
+# Test
 assertj = { module = "org.assertj:assertj-core", version.ref = "assertj" }
 junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine" }
 junit-jupiter = { module = "org.junit.jupiter:junit-jupiter" }
@@ -98,9 +97,9 @@ testcontainers = { module = "org.testcontainers:testcontainers" }
 testcontainers-postgresql = { module = "org.testcontainers:postgresql" }
 testcontainers-r2dbc = { module = "org.testcontainers:r2dbc" }
 
-commons-rng-client-api = { module = "org.apache.commons:commons-rng-client-api", version.ref = "commons-rng" }
-commons-rng-core = { module = "org.apache.commons:commons-rng-core", version.ref = "commons-rng" }
-commons-rng-simple = { module = "org.apache.commons:commons-rng-simple", version.ref = "commons-rng" }
+# Commons
+commons-lang3 = { module = "org.apache.commons:commons-lang3" }
+commons-text = { module = "org.apache.commons:commons-text" }
 
 
 [bundles]
@@ -125,4 +124,3 @@ testcontainers = [
   "testcontainers-postgresql",
   "testcontainers-r2dbc"
 ]
-commons-rng = ["commons-rng-client-api", "commons-rng-core", "commons-rng-simple"]

@@ -1,10 +1,2 @@
-rootProject.name = "nk7-platform"
+rootProject.name = "nk7-versions-catalog"
 include("catalog", "bom")
-
-dependencyResolutionManagement {
-  versionCatalogs {
-    create("libs") {
-      from(files("catalog/libs.versions.toml"))
-    }
-  }
-}
