@@ -16,6 +16,8 @@ testcontainers = "1.20.1"
 opentelemetry = "1.42.0"
 okhttp = "4.12.0"
 jackson = "2.17.2"
+neo4j = "5.25.0"
+neo4j-ogm = "4.0.11"
 
 [libraries]
 #BOMs
@@ -59,6 +61,9 @@ postgresql = { module = "org.postgresql:postgresql" }
 postgresql-r2dbc = { module = "org.postgresql:r2dbc-postgresql" }
 sqlite = { module = "org.xerial:sqlite-jdbc" }
 liquibase = { module = "org.liquibase:liquibase-core" }
+neo4j = { module = "org.neo4j.driver:neo4j-java-driver", version.ref = "neo4j" }
+neo4j-ogm-core = { module = "org.neo4j:neo4j-ogm-core", version.ref = "neo4j-ogm" }
+neo4j-ogm-bolt-driver = { module = "org.neo4j:neo4j-ogm-bolt-driver", version.ref = "neo4j-ogm" }
 
 #Kafka
 kafka-clients = { module = "org.apache.kafka:kafka-clients" }
@@ -142,4 +147,8 @@ testcontainers = [
   "testcontainers-postgresql",
   "testcontainers-r2dbc",
   "testcontainers-neo4j"
+]
+neo4j-ogm = [
+  "neo4j-ogm-core",
+  "neo4j-ogm-bolt-driver"
 ]
