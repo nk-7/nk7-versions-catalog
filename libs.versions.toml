@@ -142,6 +142,8 @@ wiremock = { module = "org.wiremock:wiremock", version.ref = "wiremock" }
 commons-lang3 = { module = "org.apache.commons:commons-lang3" }
 commons-text = { module = "org.apache.commons:commons-text" }
 
+[plugins]
+jib = { id = "com.google.cloud.tools.jib", version = "3.4.4" }
 
 [bundles]
 kotlin = [
@@ -154,12 +156,14 @@ kotlin = [
   "kotlinx-coroutines-reactor"
 ]
 test = [
-  "kotlin-test",
-  "kotlin-test-junit5",
   "assertj",
   "junit-jupiter",
   "junit-jupiter-engine",
   "junit-jupiter-params"
+]
+tests-kotlin = [
+  "kotlin-test",
+  "kotlin-test-junit5"
 ]
 testcontainers = [
   "testcontainers",
